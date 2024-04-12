@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>online casino</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+    :root {
+      --primary_color: #D83A51;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      position: relative;
+      background: url(assets/bg_img.jpg);
+      background-size: auto;
+
+      @media (min-width: 992px) {
+        background-size: cover;
+      }
+    }
+
+    main {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .body_section {
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      top: 83rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 100%;
+      padding: 20px;
+
+      @media (min-width: 767px) {
+        top: 80rem;
+        width: 80%;
+      }
+      @media (min-width: 992px) {
+        top: 50rem;
+        width: 80%;
+      }
+      @media (min-width: 1500px) {
+        top: 45rem;
+        width: 60%;
+      }
+    }
+
+    .header_section h2 {
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: left;
+      margin-bottom: 0.5rem;
+
+      @media (min-width: 992px) {
+        font-size: 1.8rem;
+      }
+      @media (min-width: 1400px) {
+        font-size: 3rem;
+      }
+    }
+    .header_section span {
+      font-weight: 400;
+      color: var(--primary_color);
+    }
+
+    .header_section p {
+      font-size: 0.6rem;
+      font-weight: 400;
+
+      @media (min-width: 767px) {
+        font-size: 0.8rem;
+      }
+      @media (min-width: 992px) {
+        font-size: 1rem;
+      }
+    }
+
+    .header_section .cards_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin: 1rem 0 1rem 0;
+      max-width: 60rem;
+
+      @media (min-width: 767px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .header_section .cards_container .card {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 1rem;
+      border: 2px solid var(--primary_color);
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      background: #000000cc;
+    }
+
+    .header_section .cards_container .card img {
+      width: 25px;
+    }
+
+    .header_section .banner_container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      border: 2px solid var(--primary_color);
+      border-radius: 1rem;
+      background: #000000cc;
+
+      @media (min-width: 767px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media (min-width: 1200px) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .header_section .banner_container .card {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 1rem;
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      margin: 0 auto;
+    }
+
+    .header_section .banner_container .card p {
+      font-size: 0.7rem;
+
+      @media (min-width: 767px) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 992px) {
+        font-size: 0.7rem;
+      }
+      @media (min-width: 1200px) {
+        font-size: 0.8rem;
+      }
+      @media (min-width: 1400px) {
+        font-size: 1rem;
+      }
+    }
+
+    .cards_section {
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .cards_section .card {
+      border: 2px solid var(--primary_color);
+      border-radius: 1rem;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      background: #000000cc;
+      position: relative;
+    }
+
+    .cards_section .card .top {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center; /* horizontally center-align */
+      align-items: center;
+      text-align: center;
+
+      @media (min-width: 992px) {
+        gap: 2rem;
+        flex-direction: row;
+      }
+    }
+
+    .cards_section .card .top div {
+      width: 100%;
+
+      @media (min-width: 992px) {
+        width: 20%;
+      }
+    }
+
+    .cards_section .card .top img {
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    .cards_section .card .top .number {
+      font-size: 3rem;
+      font-weight: 400;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .cards_section .card .top button {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem;
+      background: transparent;
+      color: white;
+      border: 2px solid var(--primary_color);
+      border-radius: 0.8rem;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .cards_section .card .top button:hover {
+      background-color: var(--primary_color);
+    }
+
+    .cards_section .card .flag {
+      position: absolute;
+      left: -1rem;
+      top: 0;
+      background-color: var(--primary_color);
+      color: white;
+      width: 10rem;
+      font-size: 0.6rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem;
+      text-align: center;
+
+      @media (min-width: 767px) {
+        left: -4rem;
+        width: 12rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .cards_section .card .bottom {
+      margin: 2rem 0 0 1rem;
+    }
+
+    .cards_section .card .bottom p {
+      font-size: 0.5rem;
+
+      @media (min-width: 1400px) {
+        font-size: 0.6rem;
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <section class="body_section">
+        <div class="header_section">
+          <h2>TOP 10 BEST <span>ONLINE CASINOS</span> APRIL 2024</h2>
+          <p>
+            Top UK real money online casinos compared and reviewed. Check our
+            list of the most popular British online casinos. Play safely &
+            responsibly.
+          </p>
+          <div class="cards_container">
+            <div class="card">
+              <img src="assets/header/shield.svg" alt="shield" />
+              <p>Trusted & Secured</p>
+            </div>
+            <div class="card">
+              <img
+                src="assets/header/fast_withdrawals.svg"
+                alt="fast_withdrawals"
+              />
+              <p>Fast Withdrawals</p>
+            </div>
+            <div class="card">
+              <img src="assets/header/uk_regulated.svg" alt="uk_regulated" />
+              <p>UK Regulated</p>
+            </div>
+          </div>
+          <div class="banner_container">
+            <div class="card">
+              <img src="assets/header/site.svg" alt="site" />
+              <p>SITE</p>
+            </div>
+            <div class="card">
+              <img src="assets/header/bonus.svg" alt="bonus" />
+              <p>WELCOME TO BONUS</p>
+            </div>
+            <div class="card">
+              <img src="assets/header/rating.svg" alt="rating" />
+              <p>RATING</p>
+            </div>
+            <div class="card">
+              <p>SCORE</p>
+            </div>
+            <div class="card">
+              <p>PLAY NOW!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards_section">
+          <div class="card">
+            <div class="flag">
+              <p>Our favorite</p>
+            </div>
+            <div class="top">
+              <div>
+                <img src="assets/body/lottoland.svg" alt="lottoland" />
+              </div>
+              <div>
+                <p>Stake £20 On Big Bass Bonanza & Get 100 FREE Spins</p>
+              </div>
+              <div>
+                <img src="assets/body/rating_group.svg" alt="rating_group" />
+              </div>
+              <div>
+                <p class="number">0</p>
+              </div>
+              <div><button>GET BOUNS</button></div>
+            </div>
+            <div class="bottom">
+              <p>
+                18+, New customers only, register, deposit and stake £20 on Big
+                Bass Bonanza within 7 days, and claim 100 Free spins on Big Bass
+                Bonanza. Free spins expire 30 days after credited. Ends 30/06/24
+                at 23:59 GMT. Full T&Cs Apply. begambleaware.org.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flag">
+              <p>NEW WELCOME OFFER</p>
+            </div>
+            <div class="top">
+              <div><img src="assets/body/pub.svg" alt="pub" /></div>
+              <div><p>100% Up To £100 Welcome Bonus</p></div>
+              <div>
+                <img src="assets/body/rating_group.svg" alt="rating_group" />
+              </div>
+              <div><p class="number">0</p></div>
+              <div><button>GET BOUNS</button></div>
+            </div>
+            <div class="bottom">
+              <p>
+                Welcome bonus for new players only | Maximum bonus is 100% up to
+                £100 | Min. deposit is £10 | No max cash out | Wagering is 40x
+                bonus | Maximum bet with an active bonus is £5 Eligibility is
+                restricted for suspected abuse | Skrill & Neteller deposits
+                excluded for welcome bonus | Cashback when offered, applies to
+                deposits where no bonus is included | Cashback is cash with no
+                restrictions |
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flag">
+              <p>NO WAGERING</p>
+            </div>
+            <div class="top">
+              <div><img src="assets/body/mrq.svg" alt="mrq" /></div>
+              <div><p>Spend £20 Get 100 Spins!</p></div>
+              <div>
+                <img src="assets/body/rating_group.svg" alt="rating_group" />
+              </div>
+              <div><p class="number">0</p></div>
+              <div><button>GET BOUNS</button></div>
+            </div>
+            <div class="bottom">
+              <p>
+                First deposit only. Min deposit & spend £20. Max 100 spins on
+                Big Bass Bonanza Keeping it Reel 10p per spin. Spins credited
+                upon spend of £20. 18+ Full T&Cs apply.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flag">
+              <p>FAST PAYOUT</p>
+            </div>
+            <div class="top">
+              <div><img src="assets/body/magical_vagas.svg" alt="mrq" /></div>
+              <div><p>100% Up To £300 + 50 Free Spins</p></div>
+              <div>
+                <img src="assets/body/rating_group.svg" alt="rating_group" />
+              </div>
+              <div><p class="number">0</p></div>
+              <div><button>GET BOUNS</button></div>
+            </div>
+            <div class="bottom">
+              <p>
+                1st dep (Exc PayPal) of £20 with code Magical. Max bonus £300 on
+                selected Match Slots, 40x wagering on the sum of deposit &
+                bonus, 5x MCR. 50 Free spins on Starburst Slots, spin value
+                0.20P. Free spins and Winnings playable on Starburst Slots only,
+                50x WR. 5x MCR. 18+ only. Full T&Cs apply.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="flag">
+              <p>FAST PAYOUT</p>
+            </div>
+            <div class="top">
+              <div><img src="assets/body/magical_vagas.svg" alt="mrq" /></div>
+              <div><p>100% Up To £300 + 50 Free Spins</p></div>
+              <div>
+                <img src="assets/body/rating_group.svg" alt="rating_group" />
+              </div>
+              <div><p class="number">0</p></div>
+              <div><button>GET BOUNS</button></div>
+            </div>
+            <div class="bottom">
+              <p>
+                1st dep (Exc PayPal) of £20 with code Magical. Max bonus £300 on
+                selected Match Slots, 40x wagering on the sum of deposit &
+                bonus, 5x MCR. 50 Free spins on Starburst Slots, spin value
+                0.20P. Free spins and Winnings playable on Starburst Slots only,
+                50x WR. 5x MCR. 18+ only. Full T&Cs apply.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
